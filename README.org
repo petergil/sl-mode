@@ -1,0 +1,39 @@
+
+#+TITLE: sl-mode - Stockholm Lokaltrafik realtime info in emacs
+
+Display realtime SL departures in Emacs!
+
+* Configure
+
+  Set the currently selected station to using the ~sl-select-station~
+  function. The station is set to a stations name from the
+  ~sl-stations~ variable.
+
+  To use this package the minimal configuration needed is an API key
+  for the 'SL Realtidsinformation 4' API, which you can get from
+  [[https://www.trafiklab.se/api][trafiklab]].
+
+  Setting it can be done with something like:
+
+  #+begin_src emacs-lisp
+    (setq sl-api-keys
+       '(("SL Realtidsinformation 4" . "0123456789abcdefedcba98765432101"))
+  #+end_src
+
+  To repopulate the station list with station id codes you also need
+  an API key for the 'SL Hållplatser och Linjer 2' API. This should
+  not be needed that often though.
+
+* Usage
+To view realtime SL departures:
+: M-x sl
+
+supported key commands:
+|-----+-----------------------------|
+| key | function                    |
+|-----+-----------------------------|
+| s   | select another station      |
+| g   | update                      |
+| q   | quit                        |
+| a   | toggle station abbreviation |
+|-----+-----------------------------|
