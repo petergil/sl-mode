@@ -35,5 +35,4 @@ supported key commands:
 | s   | select another station      |
 | g   | update                      |
 | q   | quit                        |
-| a   | toggle station abbreviation |
 |-----+-----------------------------|
