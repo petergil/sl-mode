@@ -20,6 +20,9 @@ Display realtime SL departures in Emacs!
        '(("SL Realtidsinformation 4" . "0123456789abcdefedcba98765432101"))
   #+end_src
 
+  Keep in mind that your API keys should *not* be shared publicly, you
+  should keep them secret.
+
   To repopulate the station list with station id codes you also need
   an API key for the 'SL Hållplatser och Linjer 2' API. This should
   not be needed that often though.
