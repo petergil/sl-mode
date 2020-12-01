@@ -163,6 +163,15 @@ Linjer 2'."
           (run-at-time t sl-update-interval 'sl-update))
         (sl-update)))))
 
+(defun sl-set-timewindow ()
+  "Interactivly set SL station."
+  (interactive)
+  (let ((timewindow (read-number "Time window in minutes" (string-to-number sl-timewindow))))
+    (when timewindow
+      (setq sl-timewindow (number-to-string timewindow))
+      (when sl--realtime-buffer
+        (sl-update)))))
+
 (defun sl-quit ()
   "Exit sl-mode."
   (interactive)
@@ -242,10 +251,12 @@ Linjer 2'."
   (when sl-manage-window
     (fit-window-to-buffer (get-buffer-window (current-buffer)))))
 
+(unintern 'sl-mode-map)
 (defvar sl-mode-map
   (let ((map (make-sparse-keymap 'sl-mode-map)))
     (define-key map (kbd "s") 'sl-select-station)
     (define-key map (kbd "t") 'sl-set-update-interval)
+    (define-key map (kbd "w") 'sl-set-timewindow)
     (define-key map (kbd "q") 'sl-quit)
     (define-key map (kbd "g") 'sl-update)
     map)
