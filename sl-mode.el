@@ -220,7 +220,7 @@ Linjer 2'."
                              (sl--make-color-square "GREEN") ;; TODO: Make this depend on time until leaving
                              (format "%7s" (sl--bold (gethash "DisplayTime" departure)))
                              (format "%-30s"
-                                     (concat (format "%3s"(gethash "LineNumber" departure)) " "
+                                     (concat (format "%4s"(gethash "LineNumber" departure)) " "
                                              (sl--bold (gethash "Destination" departure))))
                              (when (not (eq (gethash "StopPointDesignation" departure) :null))
                                (concat " Platform: " (gethash "StopPointDesignation" departure)))
