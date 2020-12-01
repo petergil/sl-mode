@@ -151,6 +151,18 @@ Linjer 2'."
       (when sl--realtime-buffer
         (sl-update)))))
 
+(defun sl-set-update-interval ()
+  "Interactivly set SL station."
+  (interactive)
+  (let ((interval (read-number "Update interval in seconds" sl-update-interval)))
+    (when interval
+      (setq sl-update-interval interval)
+
+      (when sl--realtime-buffer
+        (setq sl--realtime-update-timer
+          (run-at-time t sl-update-interval 'sl-update))
+        (sl-update)))))
+
 (defun sl-quit ()
   "Exit sl-mode."
   (interactive)
@@ -233,6 +245,7 @@ Linjer 2'."
 (defvar sl-mode-map
   (let ((map (make-sparse-keymap 'sl-mode-map)))
     (define-key map (kbd "s") 'sl-select-station)
+    (define-key map (kbd "t") 'sl-set-update-interval)
     (define-key map (kbd "q") 'sl-quit)
     (define-key map (kbd "g") 'sl-update)
     map)
