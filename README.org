@@ -39,3 +39,7 @@ supported key commands:
 | g   | update                      |
 | q   | quit                        |
 |-----+-----------------------------|
+
+* Inspiration
+
+  This mode is (loosely) based on [[https://github.com/mschuldt/bart-mode][bart-mode]].
