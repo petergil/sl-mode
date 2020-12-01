@@ -32,13 +32,15 @@ To view realtime SL departures:
 : M-x sl
 
 supported key commands:
-|-----+-----------------------------|
-| key | function                    |
-|-----+-----------------------------|
-| s   | select another station      |
-| g   | update                      |
-| q   | quit                        |
-|-----+-----------------------------|
+|-----+-------------------------------------------|
+| key | function                                  |
+|-----+-------------------------------------------|
+| g   | Update screen                             |
+| s   | Set station to show                       |
+| t   | Set how often the interface should update |
+| w   | Set the time window for shown departures  |
+| q   | Close sl-mode                             |
+|-----+-------------------------------------------|
 
 * Inspiration
 
