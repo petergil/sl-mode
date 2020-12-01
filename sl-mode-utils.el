@@ -1,4 +1,4 @@
-;;; sl-utils.el --- Util functions for use with sl-mode.el
+;;; sl-mode-utils.el --- Util functions for use with sl-mode.el
 
 ;; Copyright (C) 2020 Peter Gille
 

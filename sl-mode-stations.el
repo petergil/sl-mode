@@ -1,4 +1,4 @@
-;;; sl-stations.el --- List of SL stations for use with sl-mode.el
+;;; sl-mode-stations.el --- List of SL stations for use with sl-mode.el
 
 ;; Copyright (C) 2020 Peter Gille
 
